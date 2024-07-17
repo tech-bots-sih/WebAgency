@@ -631,6 +631,32 @@ svg {
   margin-block-end: 12px;
 }
 
+.about-grid-container {
+  color: var(--black);
+  margin-top: 2rem;
+  display: flex;
+  padding: 0.2rem;
+  justify-content: space-between;
+}
+
+.about-grid-item {
+  padding: 0.5rem;
+  /* border: 1px solid #ccc; */
+  text-align: center;
+}
+
+.about-grid-container h1 {
+  font-size: 7rem;
+}
+
+.about-grid-container h4 {
+  color: hsl(220, 5%, 49%);
+}
+
+.about-location {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/
