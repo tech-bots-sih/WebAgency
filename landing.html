@@ -739,6 +739,38 @@
         </section>
 
         <!-- 
+        - # Brochure
+      -->
+
+        <section
+          class="section pdf-download"
+          id="pdf-download"
+          aria-label="pdf-download"
+        >
+          <div class="container">
+            <h2 class="h2 pdf-section-title">Our Service Brochures</h2>
+            <div class="pdf-grid">
+              <div class="pdf-card">
+                <h3 class="h3">
+                  <a href="#" class="pdf-card-title">Website</a>
+                </h3>
+                <button class="btn btn-primary" data-pdf="pdf1.pdf">
+                  Download Plan
+                </button>
+              </div>
+              <div class="pdf-card">
+                <h2 class="h2">
+                  <a href="#" class="pdf-card-title">Chat Bot</a>
+                </h2>
+                <button class="btn btn-primary" data-pdf="pdf2.pdf">
+                  Download Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
         - #CTA
       -->
 
@@ -936,10 +968,16 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p> -->
 
-            <form action="" class="contact-form">
+            <form
+              class="contact-form"
+              accept-charset="UTF-8"
+              action="https://www.formbackend.com/f/356819ea2899eb79"
+              method="POST"
+            >
               <div class="input-wrapper">
                 <input
                   type="text"
+                  id="name"
                   name="name"
                   aria-label="name"
                   placeholder="Your name*"
@@ -949,7 +987,8 @@
 
                 <input
                   type="email"
-                  name="email_address"
+                  id="email"
+                  name="email"
                   aria-label="email"
                   placeholder="Email address*"
                   required
@@ -999,9 +1038,7 @@
                 </label>
               </div>
 
-              <button type="submit" class="btn btn-primary">
-                Send Message
-              </button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 
             <ul class="contact-list">

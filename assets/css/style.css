@@ -713,6 +713,68 @@ svg {
   margin-top: 3rem;
   margin-left: 1rem;
 }
+
+/*-----------------------------------*\
+  # Brochure
+\*-----------------------------------*/
+
+/* Section title styling */
+.pdf-section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Flexbox grid styling for PDF cards */
+.pdf-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* PDF card styling */
+.pdf-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: calc(50% - 20px); /* Adjust the width of each card */
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-card:hover {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* Card title styling */
+.pdf-card-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+/* Button styling */
+/* .btn-primary1 {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px; 
+}
+
+.btn-primary1:hover {
+  background-color: #0056b3;
+} */
+
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/

@@ -59,15 +59,17 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".btn-primary");
-  const popups = document.querySelectorAll(".popup");
   const closeButtons = document.querySelectorAll(".close-popup");
 
+  // Handle popup open and close
   buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const targetId = button.getAttribute("data-target");
-      const popup = document.getElementById(targetId);
-      popup.style.display = "flex";
-    });
+    const targetId = button.getAttribute("data-target");
+    if (targetId) {
+      button.addEventListener("click", () => {
+        const popup = document.getElementById(targetId);
+        popup.style.display = "flex";
+      });
+    }
   });
 
   closeButtons.forEach((button) => {
@@ -80,5 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.target.classList.contains("popup")) {
       event.target.style.display = "none";
     }
+  });
+
+  // Handle PDF download
+  const pdfButtons = document.querySelectorAll(".pdf-download .btn-primary");
+  pdfButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const pdfUrl = button.getAttribute("data-pdf");
+      if (pdfUrl) {
+        window.location.href = pdfUrl;
+      }
+    });
   });
 });
