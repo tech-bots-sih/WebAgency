@@ -35,16 +35,19 @@
   --black: hsl(0, 0%, 0%);
   --yellow: #ffbe24;
   --light-blue: #eef7ff;
+  --dark-yellow: #babd42;
 
   /**
    * gradient color
    */
 
-  --gradient: linear-gradient(
+  --gradient: linear-gradient(to left top, var(--eerie-black), var(--gray-web));
+
+  /* --gradient: linear-gradient(
     to left top,
     var(--persian-rose),
     var(--safety-orange)
-  );
+  ); */
 
   /**
    * typography
@@ -205,10 +208,14 @@ body {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+.i {
+  display: inline-block;
+  color: var(--safety-orange);
+}
 
 .btn {
   max-width: max-content;
-  color: var(--white-1);
+  color: var(--black);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   padding: 10px 30px;
@@ -217,12 +224,14 @@ body {
 }
 
 .btn-primary {
-  background-image: var(--gradient);
+  background-color: var(--yellow);
   background-size: 1000%;
 }
 
 .btn-primary:is(:hover, :focus) {
   background-position: bottom right;
+  color: var(--black);
+  background-color: var(--safety-orange);
 }
 
 .btn-secondary {
@@ -543,9 +552,9 @@ svg {
   transition: var(--transition-2);
 }
 
-.project-card:is(:hover, :focus-within) .card-content {
+/* .project-card:is(:hover, :focus-within) .card-content {
   transform: translateY(-20px);
-}
+} */
 
 .project-card .card-subtitle {
   color: var(--lavender-gray);
@@ -780,7 +789,7 @@ svg {
 }
 
 .input-field:focus {
-  outline-color: var(--red-crayola);
+  outline-color: var(--safety-orange);
 }
 
 .input-field::placeholder {
@@ -802,12 +811,12 @@ textarea.input-field {
 .checkbox {
   width: max-content;
   margin-block-start: 5px;
-  accent-color: var(--red-crayola);
+  accent-color: var(--safety-orange);
 }
 
 .label-link {
   display: inline-block;
-  color: var(--red-crayola);
+  color: var(--safety-orange);
 }
 
 .label-link:is(:hover, :focus) {
@@ -847,8 +856,8 @@ textarea.input-field {
 }
 
 .contact-card .card-icon {
-  background-color: var(--cultured-2);
-  color: var(--red-crayola);
+  background-color: var(--light-blue);
+  color: var(--safety-orange);
   font-size: 25px;
   padding: 13px;
   border-radius: 50%;
@@ -856,8 +865,8 @@ textarea.input-field {
 }
 
 .contact-card:is(:hover, :focus) .card-icon {
-  background-color: var(--red-crayola);
-  color: var(--white-1);
+  background-color: var(--safety-orange);
+  color: var(--black);
 }
 
 .contact-card .card-title {
@@ -870,7 +879,7 @@ textarea.input-field {
 }
 
 .contact-card .card-link:is(:hover, :focus) {
-  color: var(--red-crayola);
+  color: var(--safety-orange);
 }
 
 /*-----------------------------------*\
@@ -888,7 +897,7 @@ textarea.input-field {
 }
 
 .copyright-link {
-  color: var(--red-crayola);
+  color: var(--safety-orange);
   font-weight: var(--fw-500);
   display: inline-block;
 }
