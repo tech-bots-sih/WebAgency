@@ -87,15 +87,12 @@
               </h1>
             </div>
 
-            <figure class="hero-banner">
-              <img
-                src="./assets/images/hero-banner.png"
-                width="720"
-                height="673"
-                alt="hero banner"
-                class="w-100"
-              />
-            </figure>
+            <div class="video-background">
+              <video id="heroVideo" autoplay loop muted>
+                <source src="./assets/videos/softBall.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </section>
 
@@ -103,7 +100,11 @@
         - #WAve
       -->
 
-        <svg viewBox="0 375 500 100" preserveAspectRatio="xMinYMin meet">
+        <svg
+          class="service-wave"
+          viewBox="0 375 500 100"
+          preserveAspectRatio="xMinYMin meet"
+        >
           <path
             d="M0,400 C100,380 300,480 500,400 L500,500 L0,500 Z"
             style="stroke: none; fill: var(--light-blue)"

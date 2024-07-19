@@ -38,6 +38,7 @@
   --light-blue: #eef7ff;
   --dark-yellow: #babd42;
   --bright-blue: #1679ab;
+  --background: #e9dccc;
 
   /**
    * gradient color
@@ -414,22 +415,38 @@ body {
 
 .hero {
   padding-block-start: calc(var(--section-padding) + 50px);
-  text-align: center;
+  text-align: left;
+  position: relative;
+  color: white;
+  background-color: var(--background);
 }
 
 .hero-content {
-  margin-block-end: 30px;
-}
-
-.hero-subtitle {
-  color: var(--eerie-black);
-  font-size: var(--fs-5);
-  font-weight: var(--fw-500);
+  position: relative;
+  z-index: 2;
+  /* width: 66%;ś */
 }
 
 .hero-title {
-  /* margin-block: 12px 8px; */
   padding-bottom: 5rem;
+  margin-left: 2rem;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-background video {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-text {
@@ -455,6 +472,10 @@ svg {
   vertical-align: middle;
   overflow: hidden;
   margin-block-end: -1rem;
+}
+
+.service-wave {
+  background-color: var(--background);
 }
 
 /*-----------------------------------*\

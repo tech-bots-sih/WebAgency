@@ -15,6 +15,15 @@ const addEventOnElem = function (elem, type, callback) {
 };
 
 /**
+ * heroVideo
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("heroVideo").defaultPlaybackRate = 0.5;
+  document.getElementById("heroVideo").play();
+});
+
+/**
  * toggle navbar
  */
 
