@@ -30,12 +30,14 @@
   --cultured: hsl(0, 0%, 93%);
   --black_10: hsla(0, 0%, 0%, 0.1);
   --black_5: hsla(0, 0%, 0%, 0.05);
+  --black_6: hsla(0, 0%, 0%, 0.6);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 14%, 98%);
   --black: hsl(0, 0%, 0%);
   --yellow: #ffbe24;
   --light-blue: #eef7ff;
   --dark-yellow: #babd42;
+  --bright-blue: #1679ab;
 
   /**
    * gradient color
@@ -291,7 +293,18 @@ body {
   background-color: var(--light-gray);
 }
 
+.img-holder-pop {
+  aspect-ratio: var(--width-pop) / var(--height-pop);
+  background-color: var(--light-gray);
+}
+
 .img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-cover-pop {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -565,6 +578,40 @@ svg {
 .project-card .card-title {
   color: var(--white-1);
   margin-block: 12px 15px;
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /*-----------------------------------*\
