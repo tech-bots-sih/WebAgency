@@ -44,7 +44,8 @@
    * gradient color
    */
 
-  --gradient: linear-gradient(to left top, var(--eerie-black), var(--gray-web));
+  /* --gradient: linear-gradient(to left top, var(--eerie-black), var(--gray-web)); */
+  --gradient: linear-gradient(to left top, var(--yellow), var(--safety-orange));
 
   /* --gradient: linear-gradient(
     to left top,
@@ -186,6 +187,8 @@ body {
   color: var(--gray-web);
   font-size: 1.6rem;
   line-height: 1.8;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
 }
 
 ::-webkit-scrollbar {
@@ -724,7 +727,8 @@ svg {
   margin-block-end: 12px;
 }
 
-.about-grid-container {
+.about-grid-container,
+.about-location-container {
   color: var(--black);
   margin-top: 2rem;
   display: flex;
@@ -734,21 +738,70 @@ svg {
 
 .about-grid-item {
   padding: 0.5rem;
-  /* border: 1px solid #ccc; */
   text-align: center;
 }
 
-.about-grid-container h1 {
+.about-grid-container h1,
+.about-location-container h1 {
   font-size: 7rem;
 }
 
-.about-grid-container h4 {
+.about-grid-container h4,
+.about-location-container h4 {
   color: hsl(220, 5%, 49%);
 }
 
 .about-location {
-  margin-top: 3rem;
-  margin-left: 1rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .about-grid-container h1,
+  .about-location-container h1,
+  .about-item h1,
+  .about-location h1 {
+    font-size: 4rem;
+  }
+
+  .about-grid-container h4,
+  .about-location-container h4,
+  .about-item h4,
+  .about-location h4 {
+    font-size: 1.2rem;
+  }
+
+  .about-location-container .about-location,
+  .about-content h3 {
+    padding-left: 0.5rem;
+  }
+
+  .project-card {
+    height: 35rem;
+    width: 35rem;
+    margin-left: 3.5rem;
+  }
+
+  .service-card {
+    width: 35rem;
+    margin-left: 3.5rem;
+  }
+  .navbar-main-container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .contact-form,
+  .contact-list,
+  .pdf-download {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .about {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 /*-----------------------------------*\
